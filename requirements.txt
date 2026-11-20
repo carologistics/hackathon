@@ -1,0 +1,14 @@
+# Python 3.10 with ROS 2 Humble. Source /opt/ros/humble/setup.bash for rclpy and sensor_msgs.
+# CLIP needs the build tools before pip resolves its Git requirement.
+# .venv/bin/python -m pip --require-virtualenv install 'setuptools==78.1.0' 'wheel==0.45.1' 'packaging==24.2'
+# .venv/bin/python -m pip --require-virtualenv install --no-build-isolation -r requirements.txt
+--extra-index-url https://download.pytorch.org/whl/cpu
+setuptools==78.1.0
+wheel==0.45.1
+packaging==24.2
+torch==2.14.1+cpu
+torchvision==0.29.2+cpu
+ultralytics==8.4.215
+numpy==2.2.6
+opencv-python==5.1.0.95
+clip @ git+https://github.com/ultralytics/CLIP.git@7ffa84b3bfa40c42ecc1c77147a855e69cb2dd40
