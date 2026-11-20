@@ -1,17 +1,17 @@
 import cv2
 import numpy as np
 import time 
-from ultralytics import # ??
+from ultralytics import # Your code here
 
 
 # CONSTANTS
-MODEL_PATH = None # ??
+MODEL_PATH = None # Your code here
 VIDEO_PATH = "task1/box_front.mp4"
 TARGET_SIZE = 640
 IOU_THRESHOLD = 0.5
 OUTPUT_FILE_NAME = "task1/output_" + MODEL_PATH + ".mp4"
 
-def load_model(path): # ??
+def load_model(path): # Your code here
     pass
 
 
