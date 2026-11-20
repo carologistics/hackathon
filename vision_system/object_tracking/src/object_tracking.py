@@ -30,7 +30,7 @@ class ObjectTrackingNode(Node):
         self.get_logger().info(f"Waiting for camera images on {image_topic}")
 
     @staticmethod
-    def load_model(): ## ??
+    def load_model(): ## Your code here
         pass
 
     def show_image(self, message):
