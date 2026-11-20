@@ -30,9 +30,20 @@ class ObjectTrackingNode(Node):
         self.get_logger().info(f"Waiting for camera images on {image_topic}")
 
     @staticmethod
-    def load_model(): ## Your code here
-        pass
+    def load_model():
+        from ultralytics import YOLOE
 
+        model_dir = Path(__file__).resolve().parents[1] / "models"
+        model = YOLOE(str(model_dir / "yoloe-26n-seg.pt"))
+        # Ultralytics looks for the text encoder in the working directory first.
+        working_directory = Path.cwd()
+        try:
+            os.chdir(model_dir)
+            model.set_classes(["graue box"])
+        finally:
+            os.chdir(working_directory)
+        return model
+    
     def show_image(self, message):
         encodings = {
             "bgr8": (3, None),
