@@ -1,0 +1,32 @@
+# Goal
+string object_prompt
+string reference_frame
+float64 distance_threshold
+float64 approach_distance
+float64 segmentation_confidence
+string target_color
+string object_tf_name
+string approach_tf_name
+float64 timeout_sec
+uint32 min_stable_frames
+float64 max_position_jump
+---
+# Result
+bool success
+string error
+string object_tf_name
+string approach_tf_name
+float64 object_base_x
+float64 object_base_y
+float64 object_base_z
+float64 approach_base_x
+float64 approach_base_y
+float64 approach_base_yaw
+float64 object_end_effector_home_x
+float64 object_end_effector_home_y
+float64 object_end_effector_home_z
+---
+# Feedback
+bool detection_valid
+uint32 stable_frames
+float64 object_distance
